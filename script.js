@@ -83,3 +83,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+// Initialize the cart from localStorage or create a new one
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Function to add an item to the cart
+function addToCart(productName, productPrice) {
+    // Check if the product is already in the cart
+    const existingProduct = cart.find(item => item.name === productName);
+
+    if (existingProduct) {
+        // Increase the quantity if the product already exists
+        existingProduct.quantity += 1;
+    } else {
+        // Add the product as a new entry in the cart
+        cart.push({
+            name: productName,
+            price: productPrice,
+            quantity: 1
+        });
+    }
+
+    // Save the updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Notify the user
+    alert(`${productName} has been added to your cart!`);
+}
