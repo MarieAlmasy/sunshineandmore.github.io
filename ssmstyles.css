@@ -331,3 +331,14 @@ footer {
     background-size: cover;
 	background-repeat: no-repeat
 }
+/* use max-width to define styles that apply for screen widths lower than given width */
+@media screen and (max-width: 660px) {
+.desktop {
+display: none;
+}
+.mobile {
+max-height: 200px;
+    overflow: hidden;
+}
+}
+
