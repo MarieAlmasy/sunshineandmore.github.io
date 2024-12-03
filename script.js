@@ -1,3 +1,11 @@
+// Initialize the cart
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Function to load the cart
+function loadCart() {
+    cart = JSON.parse(localStorage.getItem('cart')) || [];
+}
+
 // Function to render order summary
 function renderOrderSummary() {
     loadCart(); // Ensure the latest cart is loaded
@@ -57,14 +65,21 @@ function processCheckout() {
     localStorage.removeItem('cart');
     cart = [];
 
-    // Optionally, redirect to a confirmation page
+    // Redirect to the confirmation or home page
     window.location.href = 'index.html';
 }
 
-// Render order summary on the checkout page
-if (window.location.pathname.endsWith('checkout.html')) {
-    renderOrderSummary();
+// Attach event listeners and render order summary if on the checkout page
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname.endsWith('checkout.html')) {
+        renderOrderSummary();
 
-    // Attach event listener to the "Place Order" button
-    document.getElementById('place-order').addEventListener('click', processCheckout);
-}
+        // Attach event listener to the "Place Order" button
+        const placeOrderButton = document.getElementById('place-order');
+        if (placeOrderButton) {
+            placeOrderButton.addEventListener('click', processCheckout);
+        } else {
+            console.error('Place Order button not found!');
+        }
+    }
+});
