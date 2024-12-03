@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="ssmstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="mta.html">Meet The Artist</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+    <div class="container">
+        <section id="checkout">
+            <h2>Order Summary</h2>
+            <table id="order-summary">
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                <!-- Order summary will be dynamically inserted here -->
+            </table>
+            <h3 id="total-price">Total: $0.00</h3>
+            <h2>Billing Information</h2>
+            <form id="checkout-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                <button type="button" id="place-order" class="submit-button">Place Order</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Sunshine And More. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
