@@ -8,59 +8,54 @@
 </head>
 <body>
     <header>
-        <h1><img src="SAM PNG.png.png" alt="" width="210" height="189" align="absmiddle"/><img src="SAM PNG.png.png" alt="" width="210" height="189" align="absmiddle"/><img src="SAM PNG.png.png" alt="" width="210" height="189" align="absmiddle"/><img src="SAM PNG.png.png" alt="" width="210" height="189" align="absmiddle"/></h1>
+        <h1>
+            <img src="SAM PNG.png.png" alt="Logo" width="210" height="189" />
+        </h1>
     </header>
     <nav>
         <a href="#home">Home</a>
-		<a href="mta.html">Meet The Artist</a>
-		<a href="gallery.html">Gallery</a>
+        <a href="mta.html">Meet The Artist</a>
+        <a href="gallery.html">Gallery</a>
         <a href="#products">Products</a>
         <a href="cart.html">Cart</a>
-		<a href="checkout.html">Checkout</a>
+        <a href="checkout.html">Checkout</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
         <section id="home">
             <h2>Welcome to Sunshine And More</h2>
-            <p>This is the beginning of a new online shopping space for Sunshine And More. Stay tuned for more updates to the site !</p>
+            <p>This is the beginning of a new online shopping space for Sunshine And More. Stay tuned for more updates!</p>
         </section>
-      <section id="products">
-    <h2>Featured Products</h2>
-    <div class="products">
-        <div class="product">
-            <img src="RainbowButterflyEarringsDarkGem.jpg" alt="Pride Butterfly with Gem">
-            <h3>Pride Butterfly with Gem</h3>
-            <p>$15.00</p>
-            <button onclick="addToCart('Pride Butterfly with Gem', 15)">Buy Now</button>
-        </div>
-        <div class="product">
-            <img src="RainbowButterflyEarrings.jpg" alt="Pride Butterfly with Crystal">
-            <h3>Pride Butterfly with Crystal</h3>
-            <p>$15.00</p>
-            <button onclick="addToCart('Pride Butterfly with Crystal', 15)">Buy Now</button>
-        </div>
-        <div class="product">
-            <img src="RainbowButterflyEarringsTrans.jpg" alt="Pride Butterfly Trans">
-            <h3>Pride Butterfly Trans</h3>
-            <p>$15.00</p>
-            <button onclick="addToCart('Pride Butterfly Trans', 15)">Buy Now</button>
-        </div>
-    </div>
-</section>
+
+        <section id="products">
+            <h2>Featured Products</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="RainbowButterflyEarringsDarkGem.jpg" alt="Pride Butterfly with Gem">
+                    <h3>Pride Butterfly with Gem</h3>
+                    <p>$15.00</p>
+                    <button onclick="addToCart('Pride Butterfly with Gem', 15)">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="RainbowButterflyEarrings.jpg" alt="Pride Butterfly with Crystal">
+                    <h3>Pride Butterfly with Crystal</h3>
+                    <p>$15.00</p>
+                    <button onclick="addToCart('Pride Butterfly with Crystal', 15)">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="RainbowButterflyEarringsTrans.jpg" alt="Pride Butterfly Trans">
+                    <h3>Pride Butterfly Trans</h3>
+                    <p>$15.00</p>
+                    <button onclick="addToCart('Pride Butterfly Trans', 15)">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Email: <a href="mailto:Mariecarrie23@gmail.com">Mariecarrie23@gmail.com</a></p>
             <p>Phone: (989) 746-4973</p>
             <p>Address: Saginaw, MI 48603, Ypsilanti, MI 48197</p>
-            <form action="/submit" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
-                <button type="submit" class="submit-button">Send</button>
-            </form>
         </section>
     </div>
     <footer>
