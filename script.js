@@ -136,7 +136,7 @@ function processCheckout() {
     // Clear the cart
     localStorage.removeItem('cart');
     cart = [];
-
+    console.log('total: ', totalPrice);
     // Redirect to the confirmation or home page
     window.location.href = 'index.html';
 }
